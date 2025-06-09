@@ -28,30 +28,36 @@ function App() {
           >
             Add Counter
           </button>
-        </div>
-        <div className="div-counter">
-          <FaMinus
-            onClick={() => {
-              setTab(tab - 1);
-            }}
-          />
+          <section>
+            {/* .map ici */}
+            {tab.map((elem, index) => {
+              return (
+                <div className="div-counter">
+                  <FaMinus
+                    onClick={() => {
+                      setTab(tab - 1);
+                    }}
+                  />
 
-          <p>{tab}</p>
+                  <p>{tab}</p>
 
-          <FaPlus
-            onClick={() => {
-              setTab(tab + 1);
-            }}
-          />
-        </div>
-        <div className="reset">
-          <button
-            onClick={() => {
-              setTab(0);
-            }}
-          >
-            Reset
-          </button>
+                  <FaPlus
+                    onClick={() => {
+                      setTab(tab + 1);
+                    }}
+                  />
+
+                  <button
+                    onClick={() => {
+                      setTab(0);
+                    }}
+                  >
+                    Reset
+                  </button>
+                </div>
+              );
+            })}
+          </section>
         </div>
       </main>
       <footer>
