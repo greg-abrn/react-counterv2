@@ -4,7 +4,7 @@ import { FaMinus } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [tab, setTab] = useState([0]);
 
   return (
     <>
@@ -14,27 +14,40 @@ function App() {
       </header>
       <main>
         <div className="div-add-counter">
-          <button onClick={() => {}}>Add Counter</button>
+          {/* Dans le button ci dessous, lorsqu'on clique sur Add Counter, on va push un nouvel élément dans le tableau, 
+          qui lui même est dans un state. Ça veut dire qu'à chaque fois que l'on clique, on va créer un nouveau counter */}
+          <button
+            onClick={() => {
+              // 1 : Création de la copie du tableau [tab]
+              const newTab = [...tab];
+              // 2 : Modif de la copie
+              newTab.push(0);
+              // 3 : MaJ du state avec sa copie
+              setTab(newTab);
+            }}
+          >
+            Add Counter
+          </button>
         </div>
         <div className="div-counter">
           <FaMinus
             onClick={() => {
-              setCount(count - 1);
+              setTab(tab - 1);
             }}
           />
 
-          <p>{count}</p>
+          <p>{tab}</p>
 
           <FaPlus
             onClick={() => {
-              setCount(count + 1);
+              setTab(tab + 1);
             }}
           />
         </div>
         <div className="reset">
           <button
             onClick={() => {
-              setCount(0);
+              setTab(0);
             }}
           >
             Reset
