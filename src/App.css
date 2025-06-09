@@ -6,14 +6,16 @@
   margin: 20px 0px;
 }
 
-.add {
+.manage-counter {
   display: flex;
   justify-content: center;
+  gap: 20px;
 }
 
 section {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 50px;
 }
 
 .reset {
@@ -31,7 +33,7 @@ header {
 }
 
 footer {
-  margin-top: 200px;
+  margin-top: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
