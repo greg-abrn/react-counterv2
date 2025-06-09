@@ -1,15 +1,19 @@
-.div-add-counter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .div-counter {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   margin: 20px 0px;
+}
+
+.add {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
 }
 
 .reset {
