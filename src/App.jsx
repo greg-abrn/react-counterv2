@@ -53,7 +53,7 @@ const App = () => {
               return (
                 <div key={index}>
                   <div className="div-counter">
-                    {tab > 0 ? (
+                    {counter > 0 ? (
                       <FaMinus
                         onClick={() => {
                           const copy = [...tab];
@@ -67,7 +67,7 @@ const App = () => {
                     <p>{counter}</p>
                     {/* OU ===> <p>{tab[index]}</p> */}
 
-                    {tab < 10 ? (
+                    {tab[index] < 10 ? (
                       <FaPlus
                         onClick={() => {
                           const copy = [...tab];
